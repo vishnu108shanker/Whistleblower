@@ -22,7 +22,7 @@ app.use(
         defaultSrc: ["'self'"],
         scriptSrc: ["'self'", "'unsafe-inline'"],
         styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-        imgSrc: ["'self'", "data:", "https://res.cloudinary.com"], // Allowing Cloudinary as an example
+        imgSrc: ["'self'", "data:", "https://res.cloudinary.com", "https://images.unsplash.com"], 
         connectSrc: ["'self'", ...allowedOrigins],
         fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
         objectSrc: ["'none'"],

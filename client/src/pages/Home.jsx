@@ -131,6 +131,15 @@ export default function Home() {
               View Credibility Index
             </Link>
           </div>
+          <div className="mt-4 flex justify-center">
+            <Link
+              to="/recent"
+              className="inline-flex items-center gap-2 text-slate-500 hover:text-sky-600 dark:text-slate-400 dark:hover:text-sky-400 text-sm font-medium transition-colors"
+            >
+              <Activity className="w-4 h-4" />
+              View Recent Complaints
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -15,6 +15,9 @@ router.get('/mine', verifyJWT, issueController.getMyIssues) ;
 router.get('/all', verifyJWT , isAdmin, issueController.getAllIssues) ;
 router.patch('/:id/status' , verifyJWT , isAdmin , issueController.updateIssueStatus) ;
 
+// public route to get recent issues
+router.get('/recent', issueController.getRecentComplaints);
+
 // public route to get issue status by token
 router.get('/:token', issueController.trackIssueByToken) ;
 

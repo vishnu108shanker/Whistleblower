@@ -113,3 +113,30 @@ exports.updateIssueStatus = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 }
+
+// #Function to Get recent complaints (public, paginated)
+exports.getRecentComplaints = async (req, res) => {
+  try {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 15;
+    const skip = (page - 1) * limit;
+
+    // Fetch only token, status, and createdAt for confidentiality
+    const issues = await Issue.find({}, 'token status createdAt')
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(limit);
+
+    const total = await Issue.countDocuments();
+
+    res.json({
+      success: true,
+      issues,
+      totalPages: Math.ceil(total / limit),
+      currentPage: page
+    });
+  } catch (error) {
+    console.error("Error fetching recent complaints:", error.message);
+    res.status(500).json({ error: "Internal server error" , details: error.message });
+  }
+}

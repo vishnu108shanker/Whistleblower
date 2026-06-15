@@ -11,6 +11,7 @@ import AdminPanel    from './pages/AdminPanel';
 import PublicScores  from './pages/PublicScores';
 import ReportSuccess from './pages/ReportSuccess';
 import NotFound      from './pages/NotFound';
+import RecentComplaints from './pages/RecentComplaints';
 
 import { CitizenLayout, AdminLayout } from './components/Layouts';
 
@@ -54,6 +55,7 @@ export default function App() {
         <Route element={<CitizenLayout />}>
           <Route path="/"          element={<Home />} />
           <Route path="/scores"    element={<PublicScores />} />
+          <Route path="/recent"    element={<RecentComplaints />} />
           <Route path="/track"     element={<TrackStatus />} />
           <Route path="/login"     element={<Login />} />
           <Route path="/register"  element={<Register />} />
