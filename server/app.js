@@ -14,12 +14,35 @@ const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:5173')
   .filter(Boolean);
 
 
-// sabse pehle helmet lagao 
-app.use(helmet()) ;
+// sabse pehle helmet lagao with strict CSP
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+        imgSrc: ["'self'", "data:", "https://res.cloudinary.com"], // Allowing Cloudinary as an example
+        connectSrc: ["'self'", ...allowedOrigins],
+        fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
+        objectSrc: ["'none'"],
+        upgradeInsecureRequests: [],
+      },
+    },
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+  })
+);
 // phir morgan lagao jo saare logs record karega 
 app.use(morgan('dev')) ;
-// fir cors laga ke usme forntend wale website ko access do 
-app.use(cors({ origin: allowedOrigins })) ;
+// fir cors laga ke usme forntend wale website ko access do with strict settings
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+);
 // a middleware that binds incoming data with the req.body object 
 app.use(express.json());
 
