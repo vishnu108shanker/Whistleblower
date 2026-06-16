@@ -1,0 +1,18 @@
+# Whistleblower — robots.txt
+# Allow all search engine crawlers to index public pages
+
+User-agent: *
+Allow: /
+Allow: /scores
+Allow: /recent
+Allow: /track
+Allow: /login
+Allow: /register
+
+# Disallow admin and protected routes from indexing
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /report/complete
+
+# Sitemap location
+Sitemap: https://whistleblower.vercel.app/sitemap.xml
