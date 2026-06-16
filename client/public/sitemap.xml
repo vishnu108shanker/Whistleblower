@@ -3,7 +3,7 @@
 
   <!-- Home Page — highest priority -->
   <url>
-    <loc>https://whistleblower.vercel.app/</loc>
+    <loc>https://whistleblower-gamma.vercel.app/</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Public Credibility Scores — key public feature -->
   <url>
-    <loc>https://whistleblower.vercel.app/scores</loc>
+    <loc>https://whistleblower-gamma.vercel.app/scores</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -19,7 +19,7 @@
 
   <!-- Recent Complaints — frequently updated public page -->
   <url>
-    <loc>https://whistleblower.vercel.app/recent</loc>
+    <loc>https://whistleblower-gamma.vercel.app/recent</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -27,7 +27,7 @@
 
   <!-- Track Complaint Status — public access with token -->
   <url>
-    <loc>https://whistleblower.vercel.app/track</loc>
+    <loc>https://whistleblower-gamma.vercel.app/track</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -35,7 +35,7 @@
 
   <!-- Report an Issue — requires login but is a key landing page -->
   <url>
-    <loc>https://whistleblower.vercel.app/report</loc>
+    <loc>https://whistleblower-gamma.vercel.app/report</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -43,7 +43,7 @@
 
   <!-- Login -->
   <url>
-    <loc>https://whistleblower.vercel.app/login</loc>
+    <loc>https://whistleblower-gamma.vercel.app/login</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
@@ -51,7 +51,7 @@
 
   <!-- Register -->
   <url>
-    <loc>https://whistleblower.vercel.app/register</loc>
+    <loc>https://whistleblower-gamma.vercel.app/register</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

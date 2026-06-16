@@ -15,4 +15,4 @@ Disallow: /dashboard
 Disallow: /report/complete
 
 # Sitemap location
-Sitemap: https://whistleblower.vercel.app/sitemap.xml
+Sitemap: https://whistleblower-gamma.vercel.app/sitemap.xml
