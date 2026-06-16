@@ -134,10 +134,14 @@ export default function Home() {
           <div className="mt-4 flex justify-center">
             <Link
               to="/recent"
-              className="inline-flex items-center gap-2 text-slate-500 hover:text-sky-600 dark:text-slate-400 dark:hover:text-sky-400 text-sm font-medium transition-colors"
+              aria-label="View recent complaints"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 border border-slate-200 dark:border-slate-700 px-4 py-2 rounded-lg shadow-sm hover:scale-[1.02] transform transition-all text-sm font-medium text-slate-700 dark:text-slate-200"
             >
-              <Activity className="w-4 h-4" />
-              View Recent Complaints
+              <span className="flex items-center justify-center w-8 h-8 bg-slate-100 dark:bg-slate-800 rounded-md">
+                <Activity className="w-4 h-4 text-sky-500" />
+              </span>
+              <span>View Recent Complaints</span>
+              <ChevronRight className="w-4 h-4 text-slate-400" />
             </Link>
           </div>
         </div>
